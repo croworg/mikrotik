@@ -1,12 +1,3 @@
-### ver 1
-if(or(disk_share(), disk_home(), disk_volume(), disk_home()),
-  array_element(array("disk_share()", "disk_home()", "disk_volume", "disk_home()"),
-    array_find(array(disk_share(), disk_home(), disk_volume(), disk_home()), max(array(disk_share(), disk_home(), disk_volume(), disk_home())))
-  ),
-  "disk: error"
-)
-
-### ver 2
 if(max(array(disk_share(), disk_volume(), disk_home(), disk_distr()))>0,
   concatenate(
     "D: ",
